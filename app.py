@@ -37,10 +37,12 @@ def predict_datapoint():
 
         predict_pipeline=PredictPipeline()
         results=predict_pipeline.predict(pred_df)
+        print("after prediction")
+
         return render_template('home.html',results=results[0])
     
 if __name__ == "__main__":
-    app.run(host="0.0.0.0",debug=True) # run the flask app in debug mode    
+    app.run( host="0.0.0.0" ,debug=True)  # run the flask app in debug mode (http://127.0.0.1:5000 )
 
 
       
